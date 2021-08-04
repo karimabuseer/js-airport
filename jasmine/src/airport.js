@@ -8,11 +8,15 @@ class Airport {
 
   land(plane) { 
     this.planes.push(plane)
+    plane.isLanded = true;
   }
 
-  take_off(plane) { 
+  takeOff(plane) { 
     let plane_id = this.planes.indexOf(plane);
     this.planes.splice(plane_id, 1)
   }
 
+  isPlaneIn(plane){
+    return plane.isLanded;
+  }
 }
