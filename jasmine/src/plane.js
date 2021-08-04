@@ -5,4 +5,4 @@ class Plane {
   status = () => { 
     return 'Not in airport.';
   }
-}
+} 
