@@ -6,4 +6,13 @@ class Airport {
     this.planes = []
   }
 
+  land(plane) { 
+    this.planes.push(plane)
+  }
+
+  take_off(plane) { 
+    let plane_id = this.planes.indexOf(plane);
+    this.planes.splice(plane_id, 1)
+  }
+
 }
