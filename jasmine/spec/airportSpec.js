@@ -28,4 +28,13 @@ describe ("airport", function() {
     expect(airport.isPlaneIn(plane)).toEqual(true);
   });
 
+  it ('does not let plane land if capacity is full', function(){
+    Array.from(Array(20).keys()).forEach(function(i) {
+      airport.land(new Plane());
+    });
+    expect(function() { airport.land(new Plane()) }).toThrow('Cannot land, airport full!')
+  })
+  
+  
+
 });

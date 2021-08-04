@@ -7,6 +7,9 @@ class Airport {
   }
 
   land(plane) { 
+    if (this.planes.length >= this.capacity){
+      throw 'Cannot land, airport full!'
+    }
     this.planes.push(plane)
     plane.isLanded = true;
   }
