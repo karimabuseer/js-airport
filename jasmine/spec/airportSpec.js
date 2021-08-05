@@ -3,6 +3,8 @@ describe ("airport", function() {
   beforeEach(function() {
     airport = new Airport();
     plane = new Plane();
+    weather = jasmine.createSpyObj('weather', ['isStormy']);
+    weather.isStormy.and.callFake(function() { });
   });
 
   it ('should init with capacity of 20 and empty planes array', function() {
